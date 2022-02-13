@@ -1,3 +1,5 @@
 from django.contrib import admin
+from Books_Shop_Site.models import Book
 
-# Register your models here.
+
+admin.site.register(Book)
