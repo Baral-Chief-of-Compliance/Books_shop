@@ -1,0 +1,14 @@
+{% extends 'Books_Shop_Site/base.html' %}
+
+{% block title %}
+{{ object.name_of_book }}
+{% endblock %}
+
+
+{% block content %}
+<h1>Описание книги</h1>
+
+  {{ object.name_of_book }}
+  <img src="{{ object.img.url }}" alt="картинка для {{ object.name_of_book}}">
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'Books_Shop_Site/base.html' %}
+
+{% block title %}
+Книги
+{% endblock %}
+
+
+{% block content %}
+<h1>Список книг</h1>
+{% for book in object_list %}
+  <a href="{{ book.get_absolute_url }}">{{ book.name_of_book }}</a>
+  <img src="{{ book.img.url }}" alt="картинка для {{ book.name_of_book}}">
+{% endfor %}
+{% endblock %}

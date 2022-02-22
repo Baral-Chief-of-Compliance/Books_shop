@@ -1,11 +1,16 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang = "ru">
+	<head>
 
+<title>{% block title %}{% endblock %}</title>
 
-{% block title %}
+  </head>
 
-{% endblock %}
+<body>
+  {% block content %}
 
+  {% endblock %}
+</body>
 
-{% block content %}
-
-{% endblock %}
+</html>
