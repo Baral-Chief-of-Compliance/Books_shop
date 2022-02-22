@@ -10,5 +10,9 @@
 
   {{ object.name_of_book }}
   <img src="{{ object.img.url }}" alt="картинка для {{ object.name_of_book}}">
-
+<form action="{% url 'cart:cart_add' object.id %}" method="post">
+  {{ cart_book_form }}
+  {% csrf_token %}
+  <input type= "submit" value="в корзину">
+</form>
 {% endblock %}

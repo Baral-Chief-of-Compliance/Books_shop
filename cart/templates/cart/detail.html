@@ -26,4 +26,8 @@
       {{ item.total_price }}
     {% endwith %}
   {% enfor %}
+  <h3>Всего</h3>
+  {{ cart.get_total_price }}
+  <a href="{% url 'Book_Shop_Site:books-list' %}">В магазин</a>
+  <a href="#">Оформить заказ</a>
 {% endblock %}

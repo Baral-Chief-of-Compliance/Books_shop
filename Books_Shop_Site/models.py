@@ -54,7 +54,7 @@ class Book(models.Model):
         return f'{self.name}'
 
     def get_absolute_url(self):
-        return reverse ("book-detail", kwargs={"pk": self.id})
+        return reverse ('Book_Shop_Site:book-detail', kwargs={"pk": self.id})
 
     class Meta:
         verbose_name = "Книга"
