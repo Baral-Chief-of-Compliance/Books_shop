@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 class Book(models.Model):
     Detective = "Детектив"
@@ -50,3 +52,10 @@ class Book(models.Model):
 
     def _str_(self):
         return f'{self.name}'
+
+    def get_absolute_url(self):
+        return reverse ("book-detail", kwargs={"pk": self.id})
+
+    class Meta:
+        verbose_name = "Книга"
+        verbose_name_plural = "Книги"
