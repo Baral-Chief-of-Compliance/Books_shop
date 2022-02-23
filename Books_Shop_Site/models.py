@@ -51,7 +51,7 @@ class Book(models.Model):
     img = models.ImageField("Обложка", default='Books_Shop_Site/no_image.jpg', upload_to='Books_Shop_Site/product_image')
 
     def _str_(self):
-        return f'{self.name}'
+        return self.name_of_book
 
     def get_absolute_url(self):
         return reverse ('Book_Shop_Site:book-detail', kwargs={"pk": self.id})
