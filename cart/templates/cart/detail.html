@@ -1,4 +1,4 @@
-{% extends "Book_Shop_Site/base.html" %}
+{% extends "Books_Shop_Site/base.html" %}
 {% load static %}
 
 
@@ -10,7 +10,7 @@
 {% block content %}
   <h1>Корзина покупка</h1>
   {% for item in cart %}
-    {% with book = item.book %}
+    {% with book=item.book %}
       <a href="{{ book.get_absolute_url }}">
         {{ book.name_of_book }}
       </a>
@@ -25,7 +25,7 @@
       {{ item.price }}
       {{ item.total_price }}
     {% endwith %}
-  {% enfor %}
+  {% endfor %}
   <h3>Всего</h3>
   {{ cart.get_total_price }}
   <a href="{% url 'Book_Shop_Site:books-list' %}">В магазин</a>
